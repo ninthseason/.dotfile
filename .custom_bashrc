@@ -1,0 +1,10 @@
+
+# Add all ~/bin/*/bin in PATH
+for f in $HOME/bin/*; do
+  if [ -d "$f/bin" ]; then
+    export PATH="$f/bin:$PATH"
+  fi
+done
+
+# dotfile manager
+alias dotfile="git --git-dir=$HOME/.dotfile --work-tree=$HOME"
